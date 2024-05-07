@@ -4,21 +4,25 @@
 #include <iostream>
 
 using namespace std;
-template <typename TYPE>
-TYPE triangleArea(TYPE hight, TYPE wide) {
+template <typename TYPE,typename TYPEA,typename TYPEB>
+TYPE triangleArea(TYPEA hight, TYPEB wide) {
 	return (hight * wide) / static_cast<TYPE>(2);
 }
 
 int main()
 {
-	/*int i_hight = 4;
+	int i_hight = 4;
 	int i_wide = 6;
-	cout << "三角形の面積は" << triangleArea(&i_hight, &i_wide) << endl;
+	cout << "三角形の面積は" << triangleArea<int>(i_hight, i_wide) << endl;
 	double d_hight = 3.5;
 	double d_wide = 4.5;
-	cout << "三角形面積:" << triangleArea(&d_hight, &d_wide) << endl;*/
+	cout << "三角形面積:" << triangleArea<double>(d_hight, d_wide) << endl;
+
+	cout << "三角形の面積は" << triangleArea<int, double>(i_hight, d_wide) << endl;
 
 	cout << "三角形面積:" << triangleArea<int>(10.2f, 2.3f) << endl;
+
+
 }
 
 
