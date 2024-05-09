@@ -18,9 +18,9 @@ int main()
 	double d_wide = 4.5;
 	cout << "三角形面積:" << triangleArea<double>(d_hight, d_wide) << endl;
 
-	cout << "三角形の面積は" << triangleArea<int, double>(i_hight, d_wide) << endl;
+	cout << "三角形の面積は" << triangleArea<double,int, double>(i_hight, d_wide) << endl;
 
-	cout << "三角形面積:" << triangleArea<int>(10.2f, 2.3f) << endl;
+	cout << "三角形面積:" << triangleArea<int,int,int>(10.2f, 2.3f) << endl;
 
 
 }
